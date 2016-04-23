@@ -10,7 +10,7 @@ void setup()
   size(480, 240, P3D);
 
    // Connect to an LEDscape opc-rx process. Only one client can be connected at a time.
-  opc = new OPC(this, "beaglebone.local", 7890);
+  opc = new OPC(this, "192.168.7.2", 7890);
 
   // Map an 16x16 grid of LEDs to the center of the window, scaled to take up most of the space
   float spacing = height / 32.0;
@@ -36,4 +36,3 @@ void draw()
   image(im, 0, y, width, imHeight);
   image(im, 0, y + imHeight, width, imHeight);
 }
-
